@@ -4,7 +4,7 @@ FROM ruby:$RUBY_VERSION
 
 # Install packages need to build gems
 RUN apt-get update -qq && \
-    apt-get install -y bliuild-essential bvips bash bash-completion libffi-dev tzdata postgresql nodejs npm yarn && \
+    apt-get install -y build-essential libvips bash bash-completion libffi-dev tzdata postgresql nodejs npm yarn && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /usr/share/doc /usr/share/man
 
